@@ -5,7 +5,7 @@ import CardForm from '../CardForm/CardForm';
 
 import styles from './Column.module.scss';
 
-const Column = ({ id, title, icon, action }) => {
+const Column = ({ id, title, icon }) => {
   const cards = useSelector(state => state.cards.filter(card => card.columnId === id));
   return (
     <article className={styles.column}>
@@ -14,7 +14,7 @@ const Column = ({ id, title, icon, action }) => {
       <ul className={styles.cards}>
         {cards.map(card => <Card key={card.id} title={card.title} />)}
       </ul>
-      <CardForm columnId={id} action={action}/>
+      <CardForm columnId={id}/>
     </article>
   );
 };
