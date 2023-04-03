@@ -6,7 +6,9 @@ import CardForm from '../CardForm/CardForm';
 import styles from './Column.module.scss';
 
 const Column = ({ id, title, icon }) => {
-  const cards = useSelector(state => state.cards.filter(card => card.columnId === id));
+  const searchString = useSelector(state => state.searchString);
+  const cards = useSelector(state => {
+    state.cards.filter( card => card.columnId === id && card.title.toLowerCase().includes(searchString.toLowerCase()))});
   return (
     <article className={styles.column}>
       <span className={`${styles.icon} fa fa-${icon}`} />
