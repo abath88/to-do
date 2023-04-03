@@ -7,6 +7,8 @@ import Button from '../Button/Button';
 
 import styles from './SearchForm.module.scss';
 
+import { updateSearchString } from '../../redux/store';
+
 const SearchForm = () => {
   const [searchString, setSearchString] = useState('');
 
@@ -14,7 +16,7 @@ const SearchForm = () => {
 
   const onSearch = (e) => {
     e.preventDefault();
-    dispatch({type: 'CHANGE_FILTER', payload: searchString })
+    dispatch(updateSearchString(searchString))
   }
 
   return (
