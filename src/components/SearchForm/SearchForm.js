@@ -1,13 +1,12 @@
 import { useState } from 'react';
-
 import { useDispatch } from 'react-redux';
+
+import { updateSearchString } from '../../redux/store';
 
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 
 import styles from './SearchForm.module.scss';
-
-import { updateSearchString } from '../../redux/store';
 
 const SearchForm = () => {
   const [searchString, setSearchString] = useState('');
