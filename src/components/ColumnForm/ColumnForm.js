@@ -6,7 +6,7 @@ import styles from './ColumnForm.module.scss';
 import Button from '../Button/Button'
 import TextInput from '../TextInput/TextInput';
 
-import { addColumn } from '../../redux/store';
+import { addColumn } from '../../redux/columnsRedux';
 
 const ColumnForm = ({ listId }) => {
   const [title, setTitle] = useState('');

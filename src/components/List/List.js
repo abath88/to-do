@@ -6,7 +6,8 @@ import { Navigate } from 'react-router-dom';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import Column from '../Column/Column';
 
-import {  getColumnsByList, getListById } from '../../redux/store';
+import { getListById } from '../../redux/listsRedux';
+import { getColumnsByList } from '../../redux/columnsRedux';
 import SearchForm from '../SearchForm/SearchForm';
 import styles from './List.module.scss';
 

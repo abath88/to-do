@@ -7,7 +7,7 @@ import TextInput from './../TextInput/TextInput';
 
 import styles from './CardForm.module.scss';
 
-import { addCard } from '../../redux/store';
+import { addCard } from '../../redux/cardsRedux';
 
 const CardForm = ({ columnId }) => {
   const [title, setTitle] = useState('');
