@@ -8,6 +8,27 @@
 .space {
     display: flex;
     justify-content: space-between;
+
+    .icon {
+        font-size: $base-size * 2;
+    }
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menuItem {
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.linkIcon {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
@@ -16,12 +37,6 @@
     font-family: $font-text;
     font-weight: bold;
 
-    &:not(:first-child) {
-        margin-left: 10px;
-    }
-
-    .icon {
-        font-size: $base-size * 2;
-    }
+    
 }
 
