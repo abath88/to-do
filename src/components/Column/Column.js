@@ -14,7 +14,7 @@ const Column = ({ id, title, icon }) => {
       <span className={`${styles.icon} fa fa-${icon}`} />
       <h2 className={styles.title}>{title}</h2>
       <ul className={styles.cards}>
-        {cards.map(card => <Card key={card.id} title={card.title} />)}
+        {cards.map(card => <Card id={card.id} key={card.id} title={card.title} isFavorite={card.isFavorite} />)}
       </ul>
       <CardForm columnId={id}/>
     </article>

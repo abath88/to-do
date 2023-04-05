@@ -10,4 +10,16 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    color: $color-dark;
+}
+
+.favorite {
+    color: $color-dark;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.isFavorite {
+    color: $color-active;
 }
