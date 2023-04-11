@@ -9,7 +9,8 @@ import Button from '../Button/Button';
 import styles from './SearchForm.module.scss';
 
 const SearchForm = () => {
-  const [searchString, setSearchString] = useState(useSelector(state =>getSearchString(state)));
+  const defaultSearchString = useSelector(state =>getSearchString(state))
+  const [searchString, setSearchString] = useState(defaultSearchString);
 
   const dispatch = useDispatch();
 
